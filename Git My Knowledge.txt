@@ -1,1 +1,82 @@
-stuff
+Git Branching
+
+git checkout -b <name> - creating and switching to a new branch
+git branch - works after first commit
+git switch <name>
+
+Merging
+git checkout main
+git merge <feature>
+git merge <feature> if there are no conflicings with the current branch
+
+Deleting
+git branch -d <feature>
+
+
+Documentation: https://www.notion.so/paycircle/Contributing-44eb0d939314452892ca3fff591ddb08
+--------------------------------------
+Git workflow with Git and Azure
+--------------------------------------
+
+
+Move to local path                              :			cd <path to where I have project>
+
+*--------------------------------------
+Get the latest verion          			:			git pull <origin name> <branch name> (development)
+						OR
+Fetch changes without merging                   :			git fetch <origin name>
+Merge changes(from remote to local branch)      :                       git merge origin/feature-branch
+*--------------------------------------
+Create my branch                                :                       git checkout -b <prefix: DevOps work item ID + name of task>
+						OR
+Create and switch to branch                     :                       git switch -c <prefix: DevOps work item ID + name of task>
+*--------------------------------------
+git add .
+git commit -m "idk, not mentioned in documentation, probably the task name?"
+git push -u origin <idk, task name?>
+
+*--------------------------------------
+branch list                                     :                       git branch
+
+git switch                      		:                       git checkout <branch name> 
+						OR
+git switch                     			:                       git switch <branch name>   
+*--------------------------------------
+
+*--------------------------------------
+
+Not clear here how Azure works.
+I switch to production branch? 			:			git checkout production
+									git merge <my feature>
+
+I am assuming after I commit my branch is gonna be shown:
+https://dev.azure.com/access-devops/Paycircle/_git/Payroll/commits
+
+Goes in code review
+People accepting it here?? And then it merges automatically with production code??
+What my .gitignore should contain? as I have some changes already in files I think I shouldn't commit
+
+Then if my code is accepted it goes in the pushes
+https://dev.azure.com/access-devops/Paycircle/_git/Payroll/pushes?itemVersion=GBmaster
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
